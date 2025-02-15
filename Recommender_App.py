@@ -3,8 +3,8 @@ import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.preprocessing import MultiLabelBinarizer, StandardScaler
 from scipy.sparse import hstack
+from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
-import lightgbm as lgb
 
 # Load data
 anime_data = pd.read_csv('anime.csv')
@@ -43,8 +43,8 @@ X_train_combined = hstack([X_train, genre_encoded_train, type_encoded_train, epi
 X_test_combined = hstack([X_test, genre_encoded_test, type_encoded_test, episodes_scaled_test])
 
 # Train the model with combined features
-model = lgb.LGBMRegressor(objective='regression', n_estimators=100, learning_rate=0.1)
-model.fit(X_train_combined, merged_train_data['rating_x'], eval_set=[(X_test_combined, merged_test_data['rating'])], early_stopping_rounds=10, verbose=False)
+model = LinearRegression()
+model.fit(X_train_combined, merged_train_data['rating_x'])
 
 # Streamlit app
 st.title("Anime Recommender System")
@@ -66,3 +66,8 @@ def predict_rating(title, genres, episodes, anime_type):
 if st.button("Predict Rating"):
     rating = predict_rating(title, genres, episodes, anime_type)
     st.write(f"Predicted Rating for '{title}': {rating:.2f}")
+
+# Evaluate the model
+y_pred_combined = model.predict(X_test_combined)
+rmse_combined = mean_squared_error(merged_test_data['rating'], y_pred_combined, squared=False)
+st.write(f'RMSE with additional features: {rmse_combined:.2f}')
