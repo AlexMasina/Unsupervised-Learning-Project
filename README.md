@@ -35,15 +35,15 @@ pip install pandas numpy matplotlib seaborn scikit-learn surprise
 
 ## Running the Project
 
-1. **Load and explore the datasets.**
-2. **Perform EDA to understand the data better.**
-3. **Train the recommendation model using SVD.**
-4. **Generate predictions on the test dataset.**
-5. **Export the predictions in the required format.**
+1. Load and explore the datasets.
+2. Perform EDA to understand the data better.
+3. Train the recommendation model using Regression models.
+4. Generate predictions on the test dataset.
+5. Export the predictions in the required format.
 
 ## Evaluation Metric
 
-The performance of the recommendation model is evaluated using **Root Mean Square Error (RMSE)**, which measures the standard deviation of residuals between predicted and actual ratings.
+The performance of the recommendation model is evaluated using Root Mean Square Error (RMSE), which measures the standard deviation of residuals between predicted and actual ratings.
 
 ## Submission Format
 
@@ -52,7 +52,8 @@ The final output should be a CSV file with two columns:
 ```csv
 ID,rating
 1_2011,1.0
-2_3011,4.5
+2_3011,4.5 
+
 ```
 Where ID is a concatenation of user_id and anime_id.
 
