@@ -1,16 +1,24 @@
 # Anime Recommender System
 
-## Project Overview
+## Table of contents
+* [Project Overview](#project-description)
+* [Dataset](#dataset)
+* [Methodology](#methodology)
+* [Installation & Requirements](#Installation_Requirements)
+* [Team Members](#team_members)
+
+## Project Overview <a class="anchor" id="project-description"></a>
 This project builds a recommender system for anime titles using collaborative filtering and content-based filtering techniques. The goal is to predict user ratings for anime titles they have not yet seen based on historical preferences.
 
-## Dataset
-The dataset is sourced from MyAnimeList and consists of:
+## Dataset <a class="anchor" id="dataset"></a>
+The dataset is sourced from an Open source Kaggle dataset (https://www.kaggle.com/datasets/CooperUnion/anime-recommendations-database) and consists of:
+
 - `anime.csv`: Contains metadata about anime titles (e.g., name, genre, type, episodes, rating, and member count).
 - `train.csv`: Contains user ratings for anime titles.
 - `test.csv`: Contains user-anime pairs for which predictions are required.
 - `submission.csv`: Sample submission file showing expected format.
 
-## Methodology
+## Methodology <a class="anchor" id="methodology"></a>
 ### 1. Exploratory Data Analysis (EDA):
 - Visualizations including histograms, box plots, scatter plots, and correlation matrices to understand rating distributions and relationships.
 - Analysis of how ratings vary across anime types and popularity.
@@ -28,10 +36,10 @@ The dataset is sourced from MyAnimeList and consists of:
 - Using the trained model to predict ratings for user-anime pairs in the test dataset.
 - Formatting and exporting results to a submission file.
 
-## Installation & Requirements
+## Installation & Requirements <a class="anchor" id="Installation_Requirements"></a> 
 To run this project, install the necessary dependencies:
 ```bash
-pip install pandas numpy matplotlib seaborn scikit-learn surprise
+pip install pandas numpy matplotlib seaborn scikit-learn 
 ```
 ## Running the Project
 
@@ -45,26 +53,8 @@ pip install pandas numpy matplotlib seaborn scikit-learn surprise
 
 The performance of the recommendation model is evaluated using Root Mean Square Error (RMSE), which measures the standard deviation of residuals between predicted and actual ratings.
 
-## Submission Format
 
-The final output should be a CSV file with two columns:
-
-```csv
-ID,rating
-1_2011,1.0
-2_3011,4.5 
-```
-
-Where ID is a concatenation of user_id and anime_id.
-
-## License
-This project is based on open-source data and is free to use for research and educational purposes.
-
-## Acknowledgements
-MyAnimeList API for providing anime data and user ratings.
-Surprise library for collaborative filtering implementation.
-
-## Author
+## Authors <a class="anchor" id="team_members"></a> 
 Nthabiseng Moyeni &
 Alex Masina
 
@@ -72,3 +62,10 @@ Alex Masina
 For questions or collaborations, reach out via email:
 Alex.Masina@outlook.com.
 nthaby.thateng@gmail.com
+
+## License
+This project is based on open-source data and is free to use for research and educational purposes.
+
+## Acknowledgements
+MyAnimeList API for providing anime data and user ratings.
+Surprise library for collaborative filtering implementation.
