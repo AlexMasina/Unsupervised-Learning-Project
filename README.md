@@ -32,7 +32,7 @@ The dataset is sourced from MyAnimeList and consists of:
 To run this project, install the necessary dependencies:
 ```bash
 pip install pandas numpy matplotlib seaborn scikit-learn surprise
-
+```
 ## Running the Project
 
 1. Load and explore the datasets.
@@ -53,8 +53,8 @@ The final output should be a CSV file with two columns:
 ID,rating
 1_2011,1.0
 2_3011,4.5 
-
 ```
+
 Where ID is a concatenation of user_id and anime_id.
 
 ## License
