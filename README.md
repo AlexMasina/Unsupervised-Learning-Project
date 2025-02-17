@@ -8,7 +8,7 @@
 * [Team Members](#team_members)
 
 ## Project Overview <a class="anchor" id="project-description"></a>
-This project builds a recommender system for anime titles using collaborative filtering and content-based filtering techniques. The goal is to predict user ratings for anime titles they have not yet seen based on historical preferences.
+This project builds a recommender system for anime titles using collaborative  and content-based filtering techniques. Based on historical preferences, the goal is to predict user ratings for anime titles they have not seen.
 
 ## Dataset <a class="anchor" id="dataset"></a>
 The dataset is sourced from an Open source Kaggle dataset (https://www.kaggle.com/datasets/CooperUnion/anime-recommendations-database) and consists of:
@@ -29,7 +29,7 @@ The dataset is sourced from an Open source Kaggle dataset (https://www.kaggle.co
 - Merging user rating data with anime metadata.
 
 ### 3. Model Selection & Training:
-- Collaborative filtering using Singular Value Decomposition (SVD) from Surprise library.
+- Collaborative filtering using Singular Value Decomposition (SVD) from  library.
 - Cross-validation to evaluate model performance using Root Mean Square Error (RMSE).
 
 ### 4. Prediction & Submission:
@@ -51,7 +51,7 @@ pip install pandas numpy matplotlib seaborn scikit-learn
 
 ## Evaluation Metric
 
-The performance of the recommendation model is evaluated using Root Mean Square Error (RMSE), which measures the standard deviation of residuals between predicted and actual ratings.
+The recommendation model's performance is evaluated using Root Mean Square Error (RMSE), which measures the standard deviation of residuals between predicted and actual ratings.
 
 
 ## Authors <a class="anchor" id="team_members"></a> 
@@ -59,7 +59,7 @@ Nthabiseng Moyeni &
 Alex Masina
 
 ## Contact
-For questions or collaborations, reach out via email:
+
 Alex.Masina@outlook.com.
 nthaby.thateng@gmail.com
 
@@ -67,5 +67,4 @@ nthaby.thateng@gmail.com
 This project is based on open-source data and is free to use for research and educational purposes.
 
 ## Acknowledgements
-MyAnimeList API for providing anime data and user ratings.
-Surprise library for collaborative filtering implementation.
+kaggle for providing anime data and user ratings.
