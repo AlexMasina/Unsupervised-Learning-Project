@@ -29,8 +29,8 @@ The dataset is sourced from an Open source Kaggle dataset (https://www.kaggle.co
 - Merging user rating data with anime metadata.
 
 ### 3. Model Selection & Training:
-- Collaborative filtering using Singular Value Decomposition (SVD) from  library.
-- Cross-validation to evaluate model performance using Root Mean Square Error (RMSE).
+- linear regression, Logistic Regression with 1 TF-IDF and genre feature 2. XGBoost with additional features.
+- evaluate model performance using Root Mean Square Error (RMSE).
 
 ### 4. Prediction & Submission:
 - Using the trained model to predict ratings for user-anime pairs in the test dataset.
