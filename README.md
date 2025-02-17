@@ -65,7 +65,7 @@ MyAnimeList API for providing anime data and user ratings.
 Surprise library for collaborative filtering implementation.
 
 ## Author
-Nathbiseng Moyeni &
+Nthabiseng Moyeni &
 Alex Masina
 
 ## Contact
